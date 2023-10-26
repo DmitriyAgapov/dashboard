@@ -261,7 +261,13 @@ document.addEventListener('DOMContentLoaded',
 		const checkBoxList = document.querySelector('.desktop-item')
 		const menu = document.querySelector('.main-menu')
 		const menuItems = menu.querySelectorAll('li');
-
+		
+		menuItems.forEach((i) => {
+			i.addEventListener('click', () => {
+				menuItems.forEach((it) => it.classList.remove('active'));				
+				i.classList.add('active');
+			})
+		})
 		const checkboxitems = checkBoxList.querySelectorAll('input')
 		for (let i = 0; checkboxitems.length > i; i++) {
 			checkboxitems[i].addEventListener('change', function () {

@@ -41,9 +41,26 @@ nav ul, nav li {
 	display: flex;
 }
 
+.main-menu ul li:before {
+	content: "";
+	background-size: 1.5rem;
+	background-repeat: no-repeat;
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 0 10px;
+}
+.main-menu ul li.disconnected:before {
+	filter: grayscale(1) contrast(1) opacity(0.5);
+}
 .main-menu ul li {
 	border: 1px solid #acacac;
 	transition: 0.2s ease-out 0s;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	min-width: 110px;
 }
 
 .main-menu ul li.active {
@@ -58,8 +75,8 @@ nav ul, nav li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-width: 110px;
-	padding: 5px 10px;
+
+	padding: 5px 10px 5px 0;
 	box-sizing: border-box;
 	font-size: 16px;
 	color: #4e4545;
@@ -1229,4 +1246,23 @@ nav.menu.dropdown .menu__first_level > li > a:hover {
 	background: white;
 	z-index: 0;
 	left: 1.2rem;
+}
+
+#tab_wb {
+
+}
+#wb:before {
+	background-image: url("../images/wb.png");
+
+}
+
+#ozon:before {
+	background-image: url("../images/ozon.png");
+
+}
+#cmm:before {
+	background-image: url("../images/sber.png");
+}
+#yam:before {
+	background-image: url("../images/ym.png");
 }
