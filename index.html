@@ -6,9 +6,26 @@
 	<title>БС74</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/normalize.css"/>
 	<link rel="stylesheet" href="assets/css/main.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/@easepick/datetime@1.2.1/dist/index.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@easepick/core@1.2.1/dist/index.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@easepick/base-plugin@1.2.1/dist/index.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@easepick/range-plugin@1.2.1/dist/index.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@easepick/preset-plugin@1.2.1/dist/index.umd.min.js"></script>
+
+
+	<script src="assets/js/picker.js"></script>
+	<style>
+		.material-symbols-outlined {
+			font-variation-settings:
+					'FILL' 0,
+					'wght' 400,
+					'GRAD' 0,
+					'opsz' 24
+		}
+	</style>
 </head>
 <body>
 <div class="root">
@@ -42,181 +59,278 @@
 	</header>
 	<main class="main">
 			<div id="tab_all">
-				<div class="dashboard">
-				<div class="accordition">
-					<div class="accordition__control_wrapper">
-						<a class="accordition__control"></a>
+				<div class="dashboard dashboard_1">
+					<div class="accordition">
+						<div class="accordition__btns">
+							<span></span>
+							<div class="accordition__control_wrapper">
+								<a class="accordition__control"></a>
+							</div>
+						</div>
+					</div>
+					<div class="main-btns">
+						<div class="main-btns__item">
+							<a class="main-btns__item-name" data-menuId="menu-1" href="#">Закуп</a>
+						</div>
+						<div class="main-btns__separator"></div>
+						<div class="main-btns__item">
+							<a class="main-btns__item-name" data-menuId="menu-2" href="#">Аналитика</a>
+						</div>
+						<div class="main-btns__separator"></div>
+						<div class="main-btns__item">
+							<a class="main-btns__item-name" data-menuId="menu-3" href="#">Продажи</a>
+						</div>
+					</div>
+					<div class="main-groups">
+							<div class="main-groups__item">
+								<div class="main-groups__item-bracket">
+									<div class="bracket">
+										<div class="center_top"></div>
+										<div class="center_center"></div>
+										<div class="left_bottom"></div>
+										<div class="right_bottom"></div>
+									</div>
+								</div>
+								<nav class="menu dropdown">
+									<ul class="menu__first_level">
+										<li>
+											<a href="#" data-menuId="menu-1_1">Справочники</a>
+											<ul class="menu__second_level">
+												<li>
+													<a href="#"><span class="quicktip menutip"></span>Номенклатура/SKU</a>
+													<ul class="menu__third_level">
+														<li><a href="#" id="create_nomenclature"><span class="quicktip menutip"></span>Создать номенклатуру (SKU)</a></li>
+														<li><a href="#" id="directory_nomenclature"><span class="quicktip menutip"></span>Справочник
+															номенклатуры</a></li>
+														<li><a href="#" id="download_nm_out_mp" ><span class="quicktip menutip"></span>Загрузить НМ из МП(Эксель)
+															</a></li>
+														<li><a href="#" id="download_nm_in_mp" ><span class="quicktip menutip"></span>Выгрузить НМ на МП
+															</a></li>
+														<li><a href="#" id="mapping_nm" ><span class="quicktip menutip"></span>Сопоставление НМ
+															</a></li>
+													</ul>
+												</li>
+												<li><a href="#">
+													<span class="quicktip menutip"></span>Склады</a>
+													<ul class="menu__third_level">
+														<li><a href="#" id="create_storage_fbs"><span class="quicktip menutip"></span>Создать склад ФБС</a></li>
+														<li><a href="#" id="directory_storage_fbs"><span class="quicktip menutip"></span>Справочник
+															складов ФБС</a></li>
+														<li><a href="#" id="download_storage_fbs"><span class="quicktip menutip"></span>Загрузить склады
+															из МП. ФБС</a></li>
+
+														<li><a href="#" id="storage_fbo"><span class="quicktip menutip"></span>Справочник складов ФБО
+															</a></li>
+														<li><a href="#" id="download_storage_fbo"><span class="quicktip menutip"></span>Загрузить склады ФБО
+															</a></li>
+													</ul>
+												</li>
+												<li><a href="#"><span class="quicktip menutip"></span>Статьи затрат / варианты
+													расходов</a>
+													<ul class="menu__third_level">
+														<li><a href="#" id="cash_flow"><span class="quicktip menutip"></span>Статьи движения денежных средств</a></li>
+														<li><a href="#" id="cash_cost"><span class="quicktip menutip"></span>Динамика расходов денег</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href="#" data-menuId="menu-1_2">Документы</a>
+											<!-- First Tier Drop Down -->
+											<ul class="menu__second_level">
+												<li><a href="#"><span class="quicktip menutip"></span>Поступление</a>
+													<ul class="menu__third_level">
+														<li><a href="#" id="receipt_invoices"><span class="quicktip menutip"></span>Приходные накладные</a></li>
+														<li><a href="#" id="invoice_journal"><span class="quicktip menutip"></span>Журнал приходных накладных</a></li>
+
+													</ul>
+												</li>
+												<li><a href="#" id="production"><span class="quicktip menutip"></span>Производство</a>
+
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#" data-menuId="menu-1_3">Обработки</a>
+											<!-- First Tier Drop Down -->
+											<ul class="menu__second_level">
+												<li><a href="#" id="cost_allocation"><span class="quicktip menutip"></span>Распределение затрат</a>
+
+												</li>
+												<li><a href="#" id="calculation_of_needs"><span class="quicktip menutip"></span>Расчет потребностей</a>
+
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							</div>
+
+							<div class="main-groups__item">
+								<div class="main-groups__item_svgbox">
+									<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+										 xml:space="preserve" width="26.81mm"
+										 height="26.81mm" version="1.1" fill="none" viewBox="0 0 369.76 369.76"> <g
+											clip-path="url(#clip0_432_27)"><path fill-rule="evenodd" clip-rule="evenodd" class="fil0" d="M184.88 0l-174.25 75.42 174.25 75.42 174.25 -75.42 -174.25 -75.42zm-184.88 86.66l0 206.4 177.21 76.7 0 -206.4 -177.21 -76.7zm369.76 0l-177.21 76.7 0 206.4 177.21 -76.7 0 -206.4z"
+			fill="#F2F2F2"/></g><defs><clipPath id="clip0_432_27" clip-path="polygon(0 0, 0 100%, 100% 100%, 100% 0)" fill="white"><rect width="369.76" height="369.76" fill="white"/></clipPath></defs></svg>
+								</div>
+								<div class="main-groups__item-bracket">
+									<div class="bracket">
+										<div class="center_top"></div>
+										<div class="center_center"></div>
+										<div class="left_bottom"></div>
+										<div class="right_bottom"></div>
+									</div>
+
+								</div>
+								<nav class="menu dropdown">
+									<ul class="menu__second_level">
+										<li><a href="#" id="unit"><span class="quicktip menutip"></span>Unit-экономика</a>
+
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<div class="main-groups__item">
+								<div class="main-groups__item-bracket">
+									<div class="bracket">
+										<div class="center_top"></div>
+										<div class="center_center"></div>
+										<div class="left_bottom"></div>
+										<div class="right_bottom"></div>
+									</div>
+
+								</div>
+								<nav class="menu dropdown">
+									<ul class="menu__first_level">
+										<li><a href="#" data-menuId="menu-3_1">Справочники</a>
+											<ul class="menu__second_level">
+												<li><a href="#" id="logistics_information"><span class="quicktip menutip"></span>Информация по логистике</a>
+
+												</li>
+												<li><a href="#" id="box_category"><span class="quicktip menutip"></span>Соответствие категории короба</a>
+
+												</li>
+											</ul>
+										</li>
+										<li><a href="#" data-menuId="menu-3_2">Документы</a>
+											<!-- First Tier Drop Down -->
+											<ul class="menu__second_level">
+												<li><a href="#" id="order_client"><span class="quicktip menutip"></span>Заказы клиентов</a>
+
+												</li>
+												<li><a href="#"><span class="quicktip menutip"></span>Продажи / поставки</a>
+													<ul class="menu__third_level">
+														<li><a href="#" id="FBS"><span class="quicktip menutip"></span>Сформировать поставку по FBS</a></li>
+														<li><a href="#" id="FBO"><span class="quicktip menutip"></span>Сформировать поставку по FBO</a></li>
+														<li><a href="#" id="sales_invoice"><span class="quicktip menutip"></span>Расходная накладная</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href="#" data-menuId="menu-3_3">Отчеты</a>
+											<ul class="menu__second_level">
+												<li><a href="#" id="sales_report"><span class="quicktip menutip"></span>Отчет о продажах с МП</a>
+												</li>
+												<li><a href="#" id="ABC_analysis"><span class="quicktip menutip"></span>АВС-анализ продаж</a></li>
+												<li><a href="#" id="marginality"><span class="quicktip menutip"></span>Маржинальность товаров</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+				</div>
+				<div class="dashboard dashboard_2" id="sale">
+					<div class="accordition">
+						<div class="accordition__btns">
+							<span></span>
+							<div class="accordition__control_wrapper">
+								<a class="accordition__control"></a>
+							</div>
+						</div>
+					</div>
+					<div class="main-btns nostripe" style="display: block">
+						<h2 style="margin-top: 0;">Отчет о продажах <span style="color: red; font-size: small;line-height: 22px;vertical-align: middle;">Внимание оповещения</span></h2>
+					</div>
+					<div class="main-groups">
+						<div class="main-groups__content">
+							<header id="filter_sale">
+								<form style="display: flex">
+									<div class="main-groups__header_item">
+										<input id="datepickers"/>
+										<input id="datepickere"/>
+									</div>
+									<div class="main-groups__header_item">
+										<button id="renew_report_sale">обновить </button>
+									</div>
+								</form>
+							</header>
+							<div id="report_sale">
+								report_sale
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="main-btns">
-					<div class="main-btns__item">
-						<a class="main-btns__item-name" data-menuId="menu-1" href="#">Закуп</a>
+				<div class="dashboard dashboard_3" id="item_balance">
+					<div class="accordition">
+						<div class="accordition__btns">
+							<span></span>
+						<div class="accordition__control_wrapper">
+							<a class="accordition__control"></a>
+						</div>
+						</div>
 					</div>
-					<div class="main-btns__separator"></div>
-					<div class="main-btns__item">
-						<a class="main-btns__item-name" data-menuId="menu-2" href="#">Аналитика</a>
+					<div class="main-btns nostripe" style="display: block">
+						<h2 style="margin-top: 0;">Отчет об остатках <span style="color: red; font-size: small;line-height: 22px;vertical-align: middle;">Внимание оповещения</span></h2>
 					</div>
-					<div class="main-btns__separator"></div>
-					<div class="main-btns__item">
-						<a class="main-btns__item-name" data-menuId="menu-3" href="#">Продажи</a>
+					<div class="main-groups">
+						<div class="main-groups__content">
+							<header id="filter_item_balance">
+								<form style="display: flex">
+<!--									<div class="main-groups__header_item">-->
+<!--										<input id="datepickers"/>-->
+<!--										<input id="datepickere"/>-->
+<!--									</div>-->
+									<div class="main-groups__header_item">
+										<button id="renew_report_item_sale">обновить </button>
+									</div>
+								</form>
+							</header>
+							<div id="report_item_balance">
+								report_item_balance
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="main-groups">
-						<div class="main-groups__item">
-							<div class="main-groups__item-bracket">
-								<div class="bracket">
-									<div class="center_top"></div>
-									<div class="center_center"></div>
-									<div class="left_bottom"></div>
-									<div class="right_bottom"></div>
-								</div>
-							</div>
-							<nav class="menu dropdown">
-								<ul class="menu__first_level">
-									<li>
-										<a href="#" data-menuId="menu-1_1">Справочники</a>
-										<ul class="menu__second_level">
-											<li>
-												<a href="#"><span class="quicktip menutip"></span>Номенклатура/SKU</a>
-												<ul class="menu__third_level">
-													<li><a href="#" id="create_nomenclature"><span class="quicktip menutip"></span>Создать номенклатуру (SKU)</a></li>
-													<li><a href="#" id="directory_nomenclature"><span class="quicktip menutip"></span>Справочник
-														номенклатуры</a></li>
-													<li><a href="#" id="download_nm_out_mp" ><span class="quicktip menutip"></span>Загрузить НМ из МП(Эксель)
-														</a></li>
-													<li><a href="#" id="download_nm_in_mp" ><span class="quicktip menutip"></span>Выгрузить НМ на МП
-														</a></li>
-													<li><a href="#" id="mapping_nm" ><span class="quicktip menutip"></span>Сопоставление НМ
-														</a></li>
-												</ul>
-											</li>
-											<li><a href="#">
-												<span class="quicktip menutip"></span>Склады</a>
-												<ul class="menu__third_level">
-													<li><a href="#" id="create_storage_fbs"><span class="quicktip menutip"></span>Создать склад ФБС</a></li>
-													<li><a href="#" id="directory_storage_fbs"><span class="quicktip menutip"></span>Справочник
-														складов ФБС</a></li>
-													<li><a href="#" id="download_storage_fbs"><span class="quicktip menutip"></span>Загрузить склады
-														из МП. ФБС</a></li>
 
-													<li><a href="#" id="storage_fbo"><span class="quicktip menutip"></span>Справочник складов ФБО
-														</a></li>
-													<li><a href="#" id="download_storage_fbo"><span class="quicktip menutip"></span>Загрузить склады ФБО
-														</a></li>
-												</ul>
-											</li>
-											<li><a href="#"><span class="quicktip menutip"></span>Статьи затрат / варианты
-												расходов</a>
-												<ul class="menu__third_level">
-													<li><a href="#" id="cash_flow"><span class="quicktip menutip"></span>Статьи движения денежных средств</a></li>
-													<li><a href="#" id="cash_cost"><span class="quicktip menutip"></span>Динамика расходов денег</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#" data-menuId="menu-1_2">Документы</a>
-										<!-- First Tier Drop Down -->
-										<ul class="menu__second_level">
-											<li><a href="#"><span class="quicktip menutip"></span>Поступление</a>
-												<ul class="menu__third_level">
-													<li><a href="#" id="receipt_invoices"><span class="quicktip menutip"></span>Приходные накладные</a></li>
-													<li><a href="#" id="invoice_journal"><span class="quicktip menutip"></span>Журнал приходных накладных</a></li>
-
-												</ul>
-											</li>
-											<li><a href="#" id="production"><span class="quicktip menutip"></span>Производство</a>
-
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#" data-menuId="menu-1_3">Обработки</a>
-										<!-- First Tier Drop Down -->
-										<ul class="menu__second_level">
-											<li><a href="#" id="cost_allocation"><span class="quicktip menutip"></span>Распределение затрат</a>
-
-											</li>
-											<li><a href="#" id="calculation_of_needs"><span class="quicktip menutip"></span>Расчет потребностей</a>
-
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
+				<div class="dashboard dashboard_4" id="fbs_order">
+					<div class="accordition">
+						<div class="accordition__btns">
+							<span></span>
+						<div class="accordition__control_wrapper">
+							<a class="accordition__control"></a>
 						</div>
-
-						<div class="main-groups__item">
-							<div class="main-groups__item_svgbox">
-								<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-								     xml:space="preserve" width="26.81mm"
-								     height="26.81mm" version="1.1" fill="none" viewBox="0 0 369.76 369.76"> <g
-										clip-path="url(#clip0_432_27)"><path fill-rule="evenodd" clip-rule="evenodd" class="fil0" d="M184.88 0l-174.25 75.42 174.25 75.42 174.25 -75.42 -174.25 -75.42zm-184.88 86.66l0 206.4 177.21 76.7 0 -206.4 -177.21 -76.7zm369.76 0l-177.21 76.7 0 206.4 177.21 -76.7 0 -206.4z"
-		fill="#F2F2F2"/></g><defs><clipPath id="clip0_432_27" clip-path="polygon(0 0, 0 100%, 100% 100%, 100% 0)" fill="white"><rect width="369.76" height="369.76" fill="white"/></clipPath></defs></svg>
-							</div>
-							<div class="main-groups__item-bracket">
-								<div class="bracket">
-									<div class="center_top"></div>
-									<div class="center_center"></div>
-									<div class="left_bottom"></div>
-									<div class="right_bottom"></div>
-								</div>
-
-							</div>
-							<nav class="menu dropdown">
-								<ul class="menu__second_level">
-									<li><a href="#" id="unit"><span class="quicktip menutip"></span>Unit-экономика</a>
-
-									</li>
-								</ul>
-							</nav>
 						</div>
-						<div class="main-groups__item">
-							<div class="main-groups__item-bracket">
-								<div class="bracket">
-									<div class="center_top"></div>
-									<div class="center_center"></div>
-									<div class="left_bottom"></div>
-									<div class="right_bottom"></div>
-								</div>
-
+					</div>
+					<div class="main-btns nostripe" style="display: block">
+						<h2 style="margin-top: 0;">Заказы ФБС <span style="color: red; font-size: small;line-height: 22px;vertical-align: middle;">Внимание оповещения</span></h2>
+					</div>
+					<div class="main-groups">
+						<div class="main-groups__content">
+							<header id="filter_fbs_order">
+								<form style="display: flex">
+									<!--									<div class="main-groups__header_item">-->
+									<!--										<input id="datepickers"/>-->
+									<!--										<input id="datepickere"/>-->
+									<!--									</div>-->
+									<div class="main-groups__header_item">
+										<button id="renew_report_fbs_order">обновить </button>
+									</div>
+								</form>
+							</header>
+							<div id="report_fbs_order ">
+								report_fbs_order
 							</div>
-							<nav class="menu dropdown">
-								<ul class="menu__first_level">
-									<li><a href="#" data-menuId="menu-3_1">Справочники</a>
-										<ul class="menu__second_level">
-											<li><a href="#" id="logistics_information"><span class="quicktip menutip"></span>Информация по логистике</a>
-
-											</li>
-											<li><a href="#" id="box_category"><span class="quicktip menutip"></span>Соответствие категории короба</a>
-
-											</li>
-										</ul>
-									</li>
-									<li><a href="#" data-menuId="menu-3_2">Документы</a>
-										<!-- First Tier Drop Down -->
-										<ul class="menu__second_level">
-											<li><a href="#" id="order_client"><span class="quicktip menutip"></span>Заказы клиентов</a>
-
-											</li>
-											<li><a href="#"><span class="quicktip menutip"></span>Продажи / поставки</a>
-												<ul class="menu__third_level">
-													<li><a href="#" id="FBS"><span class="quicktip menutip"></span>Сформировать поставку по FBS</a></li>
-													<li><a href="#" id="FBO"><span class="quicktip menutip"></span>Сформировать поставку по FBO</a></li>
-													<li><a href="#" id="sales_invoice"><span class="quicktip menutip"></span>Расходная накладная</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#" data-menuId="menu-3_3">Отчеты</a>
-										<ul class="menu__second_level">
-											<li><a href="#" id="sales_report"><span class="quicktip menutip"></span>Отчет о продажах с МП</a>
-											</li>
-											<li><a href="#" id="ABC_analysis"><span class="quicktip menutip"></span>АВС-анализ продаж</a></li>
-											<li><a href="#" id="marginality"><span class="quicktip menutip"></span>Маржинальность товаров</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
 						</div>
 					</div>
 				</div>
@@ -250,6 +364,11 @@
 					<input id="checkbox--5" type="checkbox" checked/>
 					<label for="checkbox--5">ЯМ</label>
 				</div>
+				<div class="checkbox">
+					<input id="checkbox--6" type="checkbox" checked/>
+					<label for="checkbox--6">Блок ФБС</label>
+				</div>
+
 			</div>
 			<div class="form-item">
 				<div class="form-item__label">Отображать помощник</div>
