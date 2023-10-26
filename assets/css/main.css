@@ -1,8 +1,41 @@
 
+
 body {
     font-family: Arial, serif;
 }
+button, input {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	font-family: Arial, serif;
+	list-style: none;
+	border-radius: 5px;
+	border: 5px solid transparent;
+	position: relative;
+	flex: 1 100%;
+	margin: 0 15px 0 0;
+	cursor: pointer;
+	padding: 8px 16px 7px 16px;
+	background: white;
+	font-size: 0.875rem;
+	font-weight: 700;
+	display: flex;
+	text-decoration: none;
+	color: #4e4545;
 
+	position: relative;
+
+
+}
+input {
+	background: white;
+	border: 3px solid #f2f2f2;
+	font-size: 1rem;
+}
+button {
+	border: 3px solid #fcfcfc;
+	background-color: #fff5a9;
+	text-transform: capitalize;
+}
 nav ul, nav li {
 	padding: 0;
 	margin: 0;
@@ -1265,4 +1298,9 @@ nav.menu.dropdown .menu__first_level > li > a:hover {
 }
 #yam:before {
 	background-image: url("../images/ym.png");
+}
+.main-groups__header_item {
+	display: flex;
+	margin-bottom: 2rem;
+	margin-top: -2rem;
 }
