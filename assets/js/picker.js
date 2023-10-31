@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded',
 		const picker = new easepick.create({
 			element: document.getElementById('datepickers'),
 			css: [
-				'https://cdn.jsdelivr.net/npm/@easepick/core@1.2.1/dist/index.css',
-				'https://cdn.jsdelivr.net/npm/@easepick/range-plugin@1.2.1/dist/index.css',
-				'https://cdn.jsdelivr.net/npm/@easepick/preset-plugin@1.2.1/dist/index.css',
+				'assets/easepick/index.css',
+				'assets/easepick/preset-plugin.css',
+				'assets/easepick/range-plugin.css',
 			],
 			lang: 'ru-RU',
 			zIndex: 1000,
