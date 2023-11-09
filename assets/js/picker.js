@@ -21,5 +21,4 @@ document.addEventListener('DOMContentLoaded',
 				elementEnd: "#datepickere"
 			}
 		});
-		picker();
 	})

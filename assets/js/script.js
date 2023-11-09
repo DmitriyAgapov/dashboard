@@ -261,21 +261,33 @@ document.addEventListener('DOMContentLoaded',
 		const checkBoxList = document.querySelector('.desktop-item')
 		const menu = document.querySelector('.main-menu')
 		const menuItems = menu.querySelectorAll('li');
-		
+
 		menuItems.forEach((i) => {
 			i.addEventListener('click', () => {
-				menuItems.forEach((it) => it.classList.remove('active'));				
+				menuItems.forEach((it) => it.classList.remove('active'));
 				i.classList.add('active');
 			})
 		})
-		const checkboxitems = checkBoxList.querySelectorAll('input')
+		const checkboxitems = checkBoxList.querySelectorAll('input[id^="checkbox--"]')
+		const blockcheckboxitems = checkBoxList.querySelector('input[id^="block_checkbox--"]')
+		const block__fbs_order = document.querySelector('#fbs_order');
+
+		blockcheckboxitems.addEventListener('change', function () {
+
+			if(!blockcheckboxitems.checked) {
+				block__fbs_order.style.display = 'none';
+			} else {
+				block__fbs_order.style.display = 'grid';
+			}
+		}, false);
+
 		for (let i = 0; checkboxitems.length > i; i++) {
 			checkboxitems[i].addEventListener('change', function () {
 				if(!this.checked) {
 					menuItems[i + 1].style.display = 'none';
 				} else {
 
-					menuItems[i + 1].style.display = 'list-item';
+					menuItems[i + 1].style.display = 'flex';
 				}
 			}, false);
 		}

@@ -486,7 +486,9 @@ nav ul, nav li {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+.modal__content .desktop-item .checkbox {
 
+}
 .modal__head {
 	height: 30px;
 	margin-bottom: 10px;
