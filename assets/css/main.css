@@ -15,7 +15,7 @@ button, input {
 	margin: 0 15px 0 0;
 	cursor: pointer;
 	padding: 8px 16px 7px 16px;
-	background: white;
+	background: transparent;
 	font-size: 0.875rem;
 	font-weight: 700;
 	/*display: flex;*/
@@ -32,10 +32,13 @@ input {
 	font-size: 1rem;
 }
 button {
-	border: 3px solid #fcfcfc;
-	background-color: #fff5a9;
+	border: 3px solid #e9e9e9;
 	text-transform: capitalize;
 }
+button:hover, button:focus {
+	background-color: rgb(255, 227, 19);
+}
+
 nav ul, nav li {
 	padding: 0;
 	margin: 0;
