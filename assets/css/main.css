@@ -757,6 +757,18 @@ nav ul, nav li {
 .main-groups__item:last-child .main-group-list:last-child .main-group-list__head {
 	overflow: hidden;
 }
+.dashboard:not(.dashboard_1) .main-groups form .main-groups__header_item:first-child {
+	flex: 1 100%;
+}
+.dashboard:not(.dashboard_1) .main-groups form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+
+}
+.dashboard:not(.dashboard_1) .main-groups {
+	grid-template-columns: auto;
+}
 
 .dashboard.closed {
 	grid-template-columns: 4rem min-content;
