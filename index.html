@@ -52,7 +52,7 @@
 						<li id="cmm">
 							<a href="#">СММ</a>
 						</li>
-						<li id="yam">
+						<li id="ym">
 							<a href="#">ЯМ</a>
 						</li>
 					</ul>
@@ -65,10 +65,10 @@
 	</header>
 	<main class="main">
 			<div id="tab_all">
-				<div class="dashboard dashboard_1">
+				<div id="dashboard_main" class="dashboard dashboard_1">
 					<div class="accordition">
 						<div class="accordition__btns">
-							<span></span>
+							<span id="pin_main" ></span>
 							<div class="accordition__control_wrapper">
 								<a class="accordition__control"></a>
 							</div>
@@ -108,8 +108,6 @@
 														<li><a href="#" id="create_nomenclature"><span class="quicktip menutip"></span>Создать номенклатуру (SKU)</a></li>
 														<li><a href="#" id="directory_nomenclature"><span class="quicktip menutip"></span>Справочник
 															номенклатуры</a></li>
-														<li><a href="#" id="download_nm_out_mp" ><span class="quicktip menutip"></span>Загрузить НМ из МП(Эксель)
-															</a></li>
 														<li><a href="#" id="download_nm_in_mp" ><span class="quicktip menutip"></span>Выгрузить НМ на МП
 															</a></li>
 														<li><a href="#" id="mapping_nm" ><span class="quicktip menutip"></span>Сопоставление НМ
@@ -210,10 +208,13 @@
 									<ul class="menu__first_level">
 										<li><a href="#" data-menuId="menu-3_1">Справочники</a>
 											<ul class="menu__second_level">
-												<li><a href="#" id="logistics_information"><span class="quicktip menutip"></span>Информация по логистике</a>
+											<li><a href="#"><span class="quicktip menutip"></span>Номенклатура/SKU</a> <ul class="menu__third_level">
+													<li><a href="#" id="create_nomenclature"><span class="quicktip menutip"></span>Создать номенклатуру (SKU)</a></li>
+													<li><a href="#" id="directory_nomenclature"><span class="quicktip menutip"></span>Справочник
+														номенклатуры</a></li> </ul>
+                                                                                        </li>
 
-												</li>
-												<li><a href="#" id="box_category"><span class="quicktip menutip"></span>Соответствие категории короба</a>
+												<li><a href="#" id="logistics_information"><span class="quicktip menutip"></span>Информация по логистике</a>
 
 												</li>
 											</ul>
@@ -246,17 +247,17 @@
 							</div>
 						</div>
 				</div>
-				<div class="dashboard dashboard_2" id="sale">
+				<div id="dashboard_sale" class="dashboard dashboard_2" id="sale">
 					<div class="accordition">
 						<div class="accordition__btns">
-							<span></span>
+							<span id="pin_sale" ></span>
 							<div class="accordition__control_wrapper">
 								<a class="accordition__control"></a>
 							</div>
 						</div>
 					</div>
 					<div class="main-btns nostripe" style="display: block">
-						<h2 style="margin-top: 0;">Отчет о продажах <span style="color: red; font-size: small;line-height: 22px;vertical-align: middle;">Внимание оповещения</span></h2>
+						<h2 style="margin-top: 0;">Отчет о продажах <span id="Notification_sale" style="color: red; font-size: small;line-height: 22px;vertical-align: middle;">Внимание оповещения</span></h2>
 					</div>
 					<div class="main-groups">
 						<div class="main-groups__content">
@@ -281,10 +282,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="dashboard dashboard_3" id="item_balance">
+				<div id="dashboard_item_balance" class="dashboard dashboard_3" id="item_balance">
 					<div class="accordition">
 						<div class="accordition__btns">
-							<span></span>
+							<span id="pin_item_balance" ></span>
 						<div class="accordition__control_wrapper">
 							<a class="accordition__control"></a>
 						</div>
@@ -315,17 +316,17 @@
 					</div>
 				</div>
 
-				<div class="dashboard dashboard_4" id="fbs_order">
+				<div id="dashboard_fbs_order" class="dashboard dashboard_4">
 					<div class="accordition">
 						<div class="accordition__btns">
-							<span></span>
+							<span id="pin_fbs_order"></span>
 						<div class="accordition__control_wrapper">
 							<a class="accordition__control"></a>
 						</div>
 						</div>
 					</div>
 					<div class="main-btns nostripe" style="display: block">
-						<h2 style="margin-top: 0;">Заказы ФБС <span style="color: red; font-size: small;line-height: 22px;vertical-align: middle;">Внимание оповещения</span></h2>
+						<h2 style="margin-top: 0;">Заказы ФБС <span id="Notification_item_balance" style="color: red; font-size: small;line-height: 22px;vertical-align: middle;">Внимание оповещения</span></h2>
 					</div>
 					<div class="main-groups">
 						<div class="main-groups__content">
@@ -361,32 +362,32 @@
 			<div class="form-item desktop-item">
 				<div class="form-item__label">Настройка рабочего стола</div>
 				<div class="checkbox">
-					<input id="checkbox--1" type="checkbox" checked>
-					<label for="checkbox--1">ВБ</label>
+					<input id="checkbox_WB" type="checkbox" checked>
+					<label for="checkbox_WB">ВБ</label>
 				</div>
 				<div class="checkbox">
-					<input id="checkbox--2" type="checkbox" checked/>
-					<label for="checkbox--2">Озон</label>
+					<input id="checkbox_OZON" type="checkbox" checked/>
+					<label for="checkbox_OZON">Озон</label>
 				</div>
 				<div class="checkbox">
-					<input id="checkbox--3" type="checkbox" checked/>
-					<label for="checkbox--3">СММ</label>
+					<input id="checkbox_CMM" type="checkbox" checked/>
+					<label for="checkbox_CMM">СММ</label>
 				</div>
 				<div class="checkbox">
-					<input id="checkbox--5" type="checkbox" checked/>
-					<label for="checkbox--5">ЯМ</label>
+					<input id="checkbox_YM" type="checkbox" checked/>
+					<label for="checkbox_YM">ЯМ</label>
 				</div>
 				<div class="checkbox">
-					<input id="block_checkbox--6" type="checkbox" checked/>
-					<label for="block_checkbox--6">Блок ФБС</label>
+					<input id="checkbox_FBS" type="checkbox" checked/>
+					<label for="checkbox_FBS">Блок ФБС</label>
 				</div>
 
 			</div>
 			<div class="form-item">
 				<div class="form-item__label">Отображать помощник</div>
 				<div class="checkbox">
-					<input id="checkbox--4" type="checkbox" checked/>
-					<label for="checkbox--4">Да</label>
+					<input id="checkbox_ASSISTANT" type="checkbox" checked/>
+					<label for="checkbox_ASSISTANT">Да</label>
 				</div>
 			</div>
 		</div>

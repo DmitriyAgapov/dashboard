@@ -268,9 +268,9 @@ document.addEventListener('DOMContentLoaded',
 				i.classList.add('active');
 			})
 		})
-		const checkboxitems = checkBoxList.querySelectorAll('input[id^="checkbox--"]')
-		const blockcheckboxitems = checkBoxList.querySelector('input[id^="block_checkbox--"]')
-		const block__fbs_order = document.querySelector('#fbs_order');
+		const checkboxitems = checkBoxList.querySelectorAll('input[id^="checkbox_"]')
+		const blockcheckboxitems = checkBoxList.querySelector('input[id^="checkbox_FBS"]')
+		const block__fbs_order = document.querySelector('#dashboard_fbs_order');
 
 		blockcheckboxitems.addEventListener('change', function () {
 
